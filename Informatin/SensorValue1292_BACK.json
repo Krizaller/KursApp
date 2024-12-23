@@ -1,0 +1,14 @@
+[
+  {
+    "sensor_name": "Температура",
+    "sensor_current_value": 20.0
+  },
+  {
+    "sensor_name": "Давление",
+    "sensor_current_value": 1.012
+  },
+  {
+    "sensor_name": "АЗОТ",
+    "sensor_current_value": 222.0
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "sensor_name": "Температура",
+    "sensor_current_value": 6.0
+  },
+  {
+    "sensor_name": "Влажность",
+    "sensor_current_value": 20.0
+  },
+  {
+    "sensor_name": "Давление",
+    "sensor_current_value": 0.1
+  },
+  {
+    "sensor_name": "Углекислый газ",
+    "sensor_current_value": 500.0
+  },
+  {
+    "sensor_name": "Кислород",
+    "sensor_current_value": 21.0
+  },
+  {
+    "sensor_name": "Этилен",
+    "sensor_current_value": 1300.0
+  },
+  {
+    "sensor_name": "АЗОТ",
+    "sensor_current_value": 1100.0
+  }
+]

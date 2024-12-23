@@ -1,0 +1,30 @@
+[
+	{
+        "container_id": "1291",
+        "container_status": 0,
+        "container_location": "Loaction 0",
+        "Sensors": [
+			{ "sensor_id": "129100", "sensor_name": "Температура","sensor_type_value":"С*","sensor_value": 22.5,"sensor_minmax": [10, 20]},
+			{ "sensor_id": "129101", "sensor_name": "Влажность","sensor_type_value":"%","sensor_value": 20,"sensor_minmax": [20, 60] },
+			{ "sensor_id": "129102", "sensor_name": "Давление","sensor_type_value":"Бар","sensor_value": 1,"sensor_minmax": [0.8, 1.1] },
+			{ "sensor_id": "129103", "sensor_name": "Углекислый газ","sensor_type_value":"PPM","sensor_value": 600,"sensor_minmax": [400, 900] },
+			{ "sensor_id": "129104", "sensor_name": "Кислород","sensor_type_value":"%","sensor_value": 20,"sensor_minmax": [19, 40]},
+			{ "sensor_id": "129105", "sensor_name": "Этилен","sensor_type_value":"PPM","sensor_value": 1200,"sensor_minmax": [1100, 2400]},
+			{ "sensor_id": "129106", "sensor_name": "АЗОТ","sensor_type_value":"PPM","sensor_value": 1200,"sensor_minmax": [1000, 2400]}
+		]
+	},
+	{
+		"container_id": "1292",
+		"container_status": 0,
+        "container_location": "Loaction 1",
+		"Sensors": [
+			{ "sensor_id": "129200", "sensor_name": "Температура","sensor_type_value":"С*","sensor_value": 22.5,"sensor_minmax": [10, 20]},
+			{ "sensor_id": "129201", "sensor_name": "Влажность","sensor_type_value":"%","sensor_value": 20,"sensor_minmax": [20, 60] },
+			{ "sensor_id": "129202", "sensor_name": "Давление","sensor_type_value":"Бар","sensor_value": 1,"sensor_minmax": [0.8, 1.1] },
+			{ "sensor_id": "129203", "sensor_name": "Углекислый газ","sensor_type_value":"PPM","sensor_value": 600,"sensor_minmax": [400, 900] },
+			{ "sensor_id": "129204", "sensor_name": "Кислород","sensor_type_value":"%","sensor_value": 20,"sensor_minmax": [19, 40]},
+			{ "sensor_id": "129205", "sensor_name": "Этилен","sensor_type_value":"PPM","sensor_value": 1200,"sensor_minmax": [1100, 2400]},
+			{ "sensor_id": "129206", "sensor_name": "АЗОТ","sensor_type_value":"PPM","sensor_value": 1200,"sensor_minmax": [1000, 2400]}
+		]
+	}
+]
