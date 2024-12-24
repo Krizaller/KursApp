@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Mysqlx.Expr;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -46,77 +47,10 @@ namespace KursApp
 
         bool RecordAction = false;
         
-        public Form1(){
+        public Form1(int operatorid){
+            OperatorIDCurrent = operatorid;
             InitializeComponent();
-            SwitchProgramm(false);
-        }
-
-        //////// Настройка оператора ////////
-
-        private void button14_Click(object sender, EventArgs e)
-        {
-            if (ValidNameOperator())
-            {
-                int operatorid = CheckOperator();
-                if (operatorid != -1)
-                {
-                    info("Доступ Разрешен");
-                    SwitchProgramm(true);
-                    OperatorIDCurrent = operatorid;
-                    RecordEvent(0, $"Пользватель {textBox2.Text} {textBox1.Text} вошел в систему");
-                }
-                else
-                {
-                    Er("Нет такого человека");
-                }
-
-            }
-
-        }
-
-        private void button15_Click(object sender, EventArgs e)
-        {
-            SwitchProgramm(false);
-            RecordEvent(0, $"Пользватель {textBox2.Text} {textBox1.Text} Вышел из системы");
-        }
-
-        private void SwitchProgramm(bool Enabled)
-        {
-            // Enabled = true;
-            Control[] containers = { Containers_Monitoring, Containers_Settings, Containers_Report };
-            foreach (var container in containers)
-            {
-                foreach (Control control in container.Controls)
-                {
-                    control.Enabled = Enabled;
-                }
-            }
-            button15.Enabled = Enabled;
-            button14.Enabled = !Enabled;
-            textBox1.Enabled = !Enabled;
-            textBox2.Enabled = !Enabled;
-            textBox3.Enabled = !Enabled;
-        }
-
-        private bool ValidNameOperator()
-        {
-            System.Windows.Forms.TextBox[] textboxs = { textBox1, textBox2, textBox3 };
-            foreach (var textbox in textboxs)
-            {
-                if (textbox.Text.Length <= 1)
-                {
-                    Er("Не может быть меньше 1 буквы");
-                    return false;
-                }
-            }
-            return true;
-        }
-
-        private int CheckOperator()
-        {
-            string name = $"{textBox1.Text}-{textBox2.Text}-{textBox3.Text}";
-            int OperatorId = db.GetOperator(name.ToLower());
-            return OperatorId;
+            RecordEvent(0, $"Пользватель {db.GetOperatorName(operatorid)} вошел в систему");
         }
 
         //////// Настройка контейнера ////////

@@ -30,12 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Sensor_N = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sebsor_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sebsor_Type_Value = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sensor_Value = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sensor_MinMax = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sensor_Change = new System.Windows.Forms.DataGridViewButtonColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.container_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,16 +40,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.Label_NContainer = new System.Windows.Forms.Label();
             this.TabConrol1 = new System.Windows.Forms.TabControl();
-            this.Containers_Operator = new System.Windows.Forms.TabPage();
-            this.button15 = new System.Windows.Forms.Button();
-            this.label20 = new System.Windows.Forms.Label();
-            this.button14 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.Containers_Settings = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -92,20 +76,25 @@
             this.label24 = new System.Windows.Forms.Label();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.button17 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.Sensor_N = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sebsor_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sebsor_Type_Value = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sensor_Value = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sensor_MinMax = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sensor_Change = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.TabConrol1.SuspendLayout();
-            this.Containers_Operator.SuspendLayout();
             this.Containers_Settings.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.Containers_Monitoring.SuspendLayout();
@@ -136,54 +125,13 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // Sensor_N
-            // 
-            this.Sensor_N.HeaderText = "№ Датчика";
-            this.Sensor_N.Name = "Sensor_N";
-            this.Sensor_N.ReadOnly = true;
-            this.Sensor_N.Width = 90;
-            // 
-            // Sebsor_Name
-            // 
-            this.Sebsor_Name.HeaderText = "Имя датчика";
-            this.Sebsor_Name.Name = "Sebsor_Name";
-            this.Sebsor_Name.ReadOnly = true;
-            // 
-            // Sebsor_Type_Value
-            // 
-            this.Sebsor_Type_Value.HeaderText = "Измерение В";
-            this.Sebsor_Type_Value.Name = "Sebsor_Type_Value";
-            this.Sebsor_Type_Value.ReadOnly = true;
-            // 
-            // Sensor_Value
-            // 
-            this.Sensor_Value.HeaderText = "Значение";
-            this.Sensor_Value.Name = "Sensor_Value";
-            this.Sensor_Value.ReadOnly = true;
-            // 
-            // Sensor_MinMax
-            // 
-            this.Sensor_MinMax.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Sensor_MinMax.HeaderText = "Пределы Мин/Макс";
-            this.Sensor_MinMax.Name = "Sensor_MinMax";
-            this.Sensor_MinMax.ReadOnly = true;
-            // 
-            // Sensor_Change
-            // 
-            this.Sensor_Change.HeaderText = "Информация";
-            this.Sensor_Change.Name = "Sensor_Change";
-            this.Sensor_Change.ReadOnly = true;
-            this.Sensor_Change.Text = "Изменить";
-            this.Sensor_Change.UseColumnTextForButtonValue = true;
-            this.Sensor_Change.Width = 80;
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(12, 36);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(129, 23);
             this.button1.TabIndex = 2;
-            this.button1.Text = "Найти конейтеры";
+            this.button1.Text = "Найти контейнеры";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -265,7 +213,6 @@
             // 
             // TabConrol1
             // 
-            this.TabConrol1.Controls.Add(this.Containers_Operator);
             this.TabConrol1.Controls.Add(this.Containers_Settings);
             this.TabConrol1.Controls.Add(this.Containers_Monitoring);
             this.TabConrol1.Controls.Add(this.Containers_Report);
@@ -274,111 +221,6 @@
             this.TabConrol1.SelectedIndex = 0;
             this.TabConrol1.Size = new System.Drawing.Size(1262, 678);
             this.TabConrol1.TabIndex = 9;
-            // 
-            // Containers_Operator
-            // 
-            this.Containers_Operator.Controls.Add(this.button15);
-            this.Containers_Operator.Controls.Add(this.label20);
-            this.Containers_Operator.Controls.Add(this.button14);
-            this.Containers_Operator.Controls.Add(this.textBox3);
-            this.Containers_Operator.Controls.Add(this.textBox2);
-            this.Containers_Operator.Controls.Add(this.label19);
-            this.Containers_Operator.Controls.Add(this.label18);
-            this.Containers_Operator.Controls.Add(this.label17);
-            this.Containers_Operator.Controls.Add(this.textBox1);
-            this.Containers_Operator.Location = new System.Drawing.Point(4, 22);
-            this.Containers_Operator.Name = "Containers_Operator";
-            this.Containers_Operator.Size = new System.Drawing.Size(1254, 652);
-            this.Containers_Operator.TabIndex = 3;
-            this.Containers_Operator.Text = "Оператор";
-            this.Containers_Operator.UseVisualStyleBackColor = true;
-            // 
-            // button15
-            // 
-            this.button15.Enabled = false;
-            this.button15.Font = new System.Drawing.Font("Times New Roman", 14.25F);
-            this.button15.Location = new System.Drawing.Point(37, 200);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(190, 35);
-            this.button15.TabIndex = 8;
-            this.button15.Text = "Отменить";
-            this.button15.UseVisualStyleBackColor = true;
-            this.button15.Click += new System.EventHandler(this.button15_Click);
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(33, 10);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(88, 21);
-            this.label20.TabIndex = 7;
-            this.label20.Text = "Оепратор";
-            // 
-            // button14
-            // 
-            this.button14.Font = new System.Drawing.Font("Times New Roman", 14.25F);
-            this.button14.Location = new System.Drawing.Point(37, 159);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(190, 35);
-            this.button14.TabIndex = 6;
-            this.button14.Text = "Потвердить";
-            this.button14.UseVisualStyleBackColor = true;
-            this.button14.Click += new System.EventHandler(this.button14_Click);
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(127, 115);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 5;
-            this.textBox3.Text = "тест";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(127, 79);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 4;
-            this.textBox2.Text = "тест";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Times New Roman", 14.25F);
-            this.label19.Location = new System.Drawing.Point(35, 113);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(86, 21);
-            this.label19.TabIndex = 3;
-            this.label19.Text = "Отчество";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Times New Roman", 14.25F);
-            this.label18.Location = new System.Drawing.Point(39, 77);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(82, 21);
-            this.label18.TabIndex = 2;
-            this.label18.Text = "Фамилия";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(77, 45);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(44, 21);
-            this.label17.TabIndex = 1;
-            this.label17.Text = "Имя";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(127, 47);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "тест";
             // 
             // Containers_Settings
             // 
@@ -503,9 +345,9 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(6, 166);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(92, 13);
+            this.label12.Size = new System.Drawing.Size(95, 13);
             this.label12.TabIndex = 15;
-            this.label12.Text = "Инервал Опроса";
+            this.label12.Text = "Интервал опроса";
             // 
             // numericUpDown2
             // 
@@ -702,9 +544,9 @@
             this.label3.Font = new System.Drawing.Font("Times New Roman", 14.25F);
             this.label3.Location = new System.Drawing.Point(259, 28);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 21);
+            this.label3.Size = new System.Drawing.Size(112, 21);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Тепература";
+            this.label3.Text = "Температура";
             // 
             // button5
             // 
@@ -733,7 +575,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(100, 23);
             this.button3.TabIndex = 0;
-            this.button3.Text = "Найти конейнеры";
+            this.button3.Text = "Найти контейнеры";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -768,11 +610,11 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Times New Roman", 14.25F);
-            this.label24.Location = new System.Drawing.Point(227, 348);
+            this.label24.Location = new System.Drawing.Point(217, 348);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(164, 21);
+            this.label24.Size = new System.Drawing.Size(174, 21);
             this.label24.TabIndex = 18;
-            this.label24.Text = "Выбраное событие";
+            this.label24.Text = "Выбранное событие";
             // 
             // dataGridView5
             // 
@@ -800,6 +642,24 @@
             this.dataGridView4.Size = new System.Drawing.Size(799, 270);
             this.dataGridView4.TabIndex = 16;
             this.dataGridView4.SelectionChanged += new System.EventHandler(this.dataGridView4_SelectionChanged);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Номер";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 150;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Статус";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 150;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Количество Датчиков";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 150;
             // 
             // label21
             // 
@@ -848,9 +708,50 @@
             this.timer1.Interval = 2000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // Sensor_N
+            // 
+            this.Sensor_N.HeaderText = "№ Датчика";
+            this.Sensor_N.Name = "Sensor_N";
+            this.Sensor_N.ReadOnly = true;
+            this.Sensor_N.Width = 90;
+            // 
+            // Sebsor_Name
+            // 
+            this.Sebsor_Name.HeaderText = "Имя датчика";
+            this.Sebsor_Name.Name = "Sebsor_Name";
+            this.Sebsor_Name.ReadOnly = true;
+            // 
+            // Sebsor_Type_Value
+            // 
+            this.Sebsor_Type_Value.HeaderText = "Измерение В";
+            this.Sebsor_Type_Value.Name = "Sebsor_Type_Value";
+            this.Sebsor_Type_Value.ReadOnly = true;
+            // 
+            // Sensor_Value
+            // 
+            this.Sensor_Value.HeaderText = "Значение";
+            this.Sensor_Value.Name = "Sensor_Value";
+            this.Sensor_Value.ReadOnly = true;
+            // 
+            // Sensor_MinMax
+            // 
+            this.Sensor_MinMax.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Sensor_MinMax.HeaderText = "Пределы Мин/Макс";
+            this.Sensor_MinMax.Name = "Sensor_MinMax";
+            this.Sensor_MinMax.ReadOnly = true;
+            // 
+            // Sensor_Change
+            // 
+            this.Sensor_Change.HeaderText = "Информация";
+            this.Sensor_Change.Name = "Sensor_Change";
+            this.Sensor_Change.ReadOnly = true;
+            this.Sensor_Change.Text = "Изменить";
+            this.Sensor_Change.UseColumnTextForButtonValue = true;
+            this.Sensor_Change.Width = 80;
+            // 
             // Column4
             // 
-            this.Column4.HeaderText = "Тип собития";
+            this.Column4.HeaderText = "Тип события";
             this.Column4.Name = "Column4";
             this.Column4.Width = 150;
             // 
@@ -858,24 +759,6 @@
             // 
             this.Column5.HeaderText = "Количество";
             this.Column5.Name = "Column5";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Номер";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 150;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Статус";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 150;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Количество Датчиков";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 150;
             // 
             // Form1
             // 
@@ -888,8 +771,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.TabConrol1.ResumeLayout(false);
-            this.Containers_Operator.ResumeLayout(false);
-            this.Containers_Operator.PerformLayout();
             this.Containers_Settings.ResumeLayout(false);
             this.Containers_Settings.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -944,12 +825,6 @@
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Sensor_N;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Sebsor_Name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Sebsor_Type_Value;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Sensor_Value;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Sensor_MinMax;
-        private System.Windows.Forms.DataGridViewButtonColumn Sensor_Change;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label4;
@@ -961,16 +836,6 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TabPage Containers_Report;
-        private System.Windows.Forms.TabPage Containers_Operator;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Label label23;
@@ -979,11 +844,17 @@
         private System.Windows.Forms.DataGridView dataGridView4;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Sensor_N;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Sebsor_Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Sebsor_Type_Value;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Sensor_Value;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Sensor_MinMax;
+        private System.Windows.Forms.DataGridViewButtonColumn Sensor_Change;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }
 
